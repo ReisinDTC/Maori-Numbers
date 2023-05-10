@@ -17,7 +17,7 @@ def yes_no(question_text):
         # If they say no, output 'Program Continues'
         elif answer == "no" or answer == "n":
             answer = "No"
-            return answer
+            print("Program continues")
 
         # Otherwise - show error
         else:
@@ -36,7 +36,8 @@ def instructions():
     print("You have unlimited tries but you want a attempt score")
     print()
 
-# Asks them if they want to continue
+
+#
 def continues():
     print()
     print("Well then, Good luck and wish you the very best of luck!")
@@ -51,12 +52,11 @@ else:
     print("Program continues")
 
 continues_playing = input("Do you want to continue with the quiz? ")
+giving_up = input("Maybe next time. ")
 
-if continues_playing == "y" or "yes":
-    continues_playing = "Yes"
+if continues_playing == "y" or "yes" or "Yes":
     continues()
-elif continues_playing == "No":
-    print("Maybe another time")
+if giving_up == "n" or "no" or "No":
+    print("Maybe next time. ")
 else:
     print("Plz answer Yes or No")
-
