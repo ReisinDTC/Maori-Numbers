@@ -1,5 +1,6 @@
-"""Component 1 - Welcome_user_v4
-It will accept lower case letters
+"""Component 1 - Welcome_user_v5
+Making sure that it will only work for Yes and No.
+Anything else would have to make sure they must do it with those 
 """
 
 
@@ -17,3 +18,8 @@ while show_instructions != "x":
     elif show_instructions == "no" or show_instructions == "No" or show_instructions == "n":
         print("Program continues")
 
+    # Otherwise - show error
+    else:
+        print("Please answer 'yes' or 'no'")
+
+    print(f"You entered '{show_instructions}'")
