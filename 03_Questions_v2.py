@@ -10,7 +10,7 @@ print("This is a test about the Maori numbers and you will need to\n"
       "be incorrect.\n")
 
 # 1st list
-numbers = [["Tahi", "one"], ["Rua", "two"], ["Toru", "three"], ["Wha", "four"], ["Rima", "five"],
+numbers = [["Tahi", "one"], ["Rua", "two"], ["Toru", "three"], ["Whā", "four"], ["Rima", "five"],
            ["Ono", "six"], ["Whitu", "seven"], ["Waru", "eight"], ["iwa", "nine"], ["tekau", "ten"]]
 
 choice = input("Enter test: 'N' to start the quiz:  ")

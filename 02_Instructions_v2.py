@@ -38,12 +38,12 @@ def instructions():
     print()
 
 
-#
+# Making it continue if yes
 def continues():
     print()
     print("Well then, Good luck and wish you the very best of luck!")
 
-
+# Ending the quiz if they say No
 def giving_up():
     print()
     print("Maybe next time. ")
