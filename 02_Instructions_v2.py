@@ -31,7 +31,8 @@ def instructions():
     print()
     print("There are 10 questions")
     print()
-    print("Give the answer in English words")
+    print("Give the answer in English words in lower case "
+          "like two instead of Two, or four instead of Four ect.\n")
     print()
     print("You have unlimited tries but you want a attempt score")
     print()
@@ -43,6 +44,11 @@ def continues():
     print("Well then, Good luck and wish you the very best of luck!")
 
 
+def giving_up():
+    print()
+    print("Maybe next time. ")
+
+
 # Main routine go here...
 played_before = yes_no("Do you want to have instructions? ")
 
@@ -52,11 +58,18 @@ else:
     print("Program continues")
 
 continues_playing = input("Do you want to continue with the quiz? ")
-giving_up = input("Maybe next time. ")
 
-if continues_playing == "y" or "yes" or "Yes":
+if continues_playing == "yes":
     continues()
-if giving_up == "n" or "no" or "No":
-    print("Maybe next time. ")
+elif continues_playing == "Yes":
+    continues()
+elif continues_playing == "y":
+    continues()
+elif continues_playing == "no":
+    giving_up()
+elif continues_playing == "No":
+    giving_up()
+elif continues_playing == "n":
+    giving_up()
 else:
-    print("Plz answer Yes or No")
+    print("Plz answer yes or no")
