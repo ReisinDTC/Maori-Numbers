@@ -1,9 +1,31 @@
 """00_MNN_Base_v1
-This is the code without the last component
-"""
-
+This is the code without the last component"""
+import random
 
 # Functions go here...
+
+
+def play():
+    choice_ = input("Enter test: 'L' to answer lower case words, 'U' to answer upper case words, "
+                    "'N' to answer in numbers and not words: ")
+    if choice_ == "L":
+        choice_ = lower_case
+    if choice_ == "U":
+        choice_ = upper_case
+    if choice_ == "N":
+        choice_ = numbers
+
+    random.shuffle(choice_)
+
+    for i in choice_:
+        answer = input("Enter the english word in lower case for {}: ".format(i[0]))
+        if answer == i[1]:
+            print("CORRECT")
+
+    else:
+        print("INCORRECT")
+
+
 def yes_no(question_text):
     while True:
 
@@ -18,8 +40,7 @@ def yes_no(question_text):
         # If they say no, output 'Program Continues'
         elif answer == "no" or answer == "n":
             answer = "No"
-            print("Well enjoy")
-            quiz()
+            print("Program continues")
 
         # Otherwise - show error
         else:
@@ -44,7 +65,7 @@ def instructions():
 def continues():
     print()
     print("Well then, Good luck and wish you the very best of luck!")
-    quiz()
+    play()
 
 
 # Ending the quiz if they say No
@@ -97,11 +118,8 @@ while show_instructions != "x":
     # Otherwise - show error
     else:
         print("Please answer 'yes' or 'no'")
-
     print(f"You entered '{show_instructions}'")
 
-
-import random
 
 # This uses three ordinary lists
 
@@ -111,31 +129,10 @@ print("This is a test about the Maori numbers and you will need to\n"
 
 # 1st list
 lower_case = [["Tahi", "one"], ["Rua", "two"], ["Toru", "three"], ["Whā", "four"], ["Rima", "five"],
-                ["Ono", "six"], ["Whitu", "seven"], ["Waru", "eight"], ["iwa", "nine"], ["Tekau", "ten"]]
+              ["Ono", "six"], ["Whitu", "seven"], ["Waru", "eight"], ["iwa", "nine"], ["Tekau", "ten"]]
 # 2nd list
 upper_case = [["Tahi", "One"], ["Rua", "Two"], ["Toru", "Three"], ["Whā", "Four"], ["Rima", "Five"],
-                 ["Ono", "Six"], ["Whitu", "Seven"], ["Waru", "Eight"], ["iwa", "Nine"], ["Tekau", "Ten"]]
+              ["Ono", "Six"], ["Whitu", "Seven"], ["Waru", "Eight"], ["iwa", "Nine"], ["Tekau", "Ten"]]
 # 3rd list
 numbers = [["Tahi", "1"], ["Rua", "2"], ["Toru", "3"], ["Whā", "4"], ["Rima", "5"],
            ["Ono", "6"], ["Whitu", "7"], ["Waru", "8"], ["iwa", "9"], ["Tekau", "10"]]
-
-
-def quiz():
-    choice_ = input("Enter test: 'L' to answer lower case words, 'U' to answer upper case words, "
-                    "'N' to answer in numbers and not words: ")
-    if choice_ == "L":
-        choice_ = lower_case
-    if choice_ == "U":
-        choice_ = upper_case
-    if choice_ == "N":
-        choice_ = numbers
-
-    random.shuffle(choice_)
-
-    for i in choice_:
-        answer = input("Enter the english word in lower case for {}: ".format(i[0]))
-        if answer == i[1]:
-            print("CORRECT")
-
-    else:
-        print("INCORRECT")
