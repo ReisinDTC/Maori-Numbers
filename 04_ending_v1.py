@@ -1,4 +1,5 @@
 """ Component 4 - ending_v1
+seeing if they enjoyed the quiz
 """
 
 enjoyed = input("Did you enjoy this quiz: ")

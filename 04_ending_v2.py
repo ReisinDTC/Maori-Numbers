@@ -1,12 +1,12 @@
 """ Component 4 - ending_v2
+saying goodbye and ending the code
 """
 
 import random
 
 
 def goodbye():
-    print("Goodbye, hope you enjoyed that and maybe play again!"
-          " Enjoy the rest of the marking Mr Baker. ")
+    print("Goodbye! Hope you enjoyed the quiz.")
 
 
 enjoyed = input("Did you enjoy this quiz: ")
