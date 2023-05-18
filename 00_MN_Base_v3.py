@@ -1,32 +1,44 @@
-"""00_MNN_Base_v1
-Fixing up, so it can hopefully work and putting in component 4"""
+"""00_MN_Base_v3 - """
+
+
 import random
-
-# Functions go here...
-
-
-def goodbye():
-    print("Goodbye, hope you enjoyed that and maybe play again!"
-          " Enjoy the rest of the marking Mr Baker. ")
 
 
 def play():
-    choice_ = input("Enter test: 'L' to answer lower case words, 'U' to answer upper case words, "
-                    "'N' to answer in numbers and not words: ")
+    # 1st list
+    lower_case = [["Tahi", "one"], ["Rua", "two"], ["Toru", "three"],
+                  ["Whā", "four"], ["Rima", "five"],
+                  ["Ono", "six"], ["Whitu", "seven"], ["Waru", "eight"],
+                  ["iwa", "nine"], ["Tekau", "ten"]]
+    # 2nd list
+    upper_case = [["Tahi", "One"], ["Rua", "Two"], ["Toru", "Three"],
+                  ["Whā", "Four"], ["Rima", "Five"],
+                  ["Ono", "Six"], ["Whitu", "Seven"], ["Waru", "Eight"],
+                  ["iwa", "Nine"], ["Tekau", "Ten"]]
+    # 3rd list
+    numbers = [["Tahi", "1"], ["Rua", "2"], ["Toru", "3"], ["Whā", "4"],
+               ["Rima", "5"],
+               ["Ono", "6"], ["Whitu", "7"], ["Waru", "8"], ["iwa", "9"],
+               ["Tekau", "10"]]
+
+    quizz = ""
+    choice_ = input(
+        "Enter test: 'L' to answer lower case words, 'U' to answer upper case words, "
+        "'N' to answer in numbers and not words: ")
     if choice_ == "L":
-        choice_ = lower_case
+        quizz = lower_case
     if choice_ == "U":
-        choice_ = upper_case
+        quizz = upper_case
     if choice_ == "N":
-        choice_ = numbers
+        quizz = numbers
+    print(quizz)
+    random.shuffle(quizz)
 
-    random.shuffle(choice_)
-
-    for i in choice_:
-        answer = input("Enter the english word in lower case for {}: ".format(i[0]))
+    for i in quizz:
+        answer = input(
+            "Enter the english word in lower case for {}: ".format(i[0]))
         if answer == i[1]:
             print("CORRECT")
-
     else:
         print("INCORRECT")
 
@@ -109,7 +121,8 @@ show_instructions = ""
 while show_instructions != "x":
 
     # Ask the user if they have played before
-    show_instructions = input("Would you like the instructions of this quiz?: ")
+    show_instructions = input(
+        "Would you like the instructions of this quiz?: ")
 
     # If they say yes, output 'Program Continues'
     if show_instructions == "yes" or show_instructions == "Yes" or show_instructions == "y":
@@ -126,33 +139,3 @@ while show_instructions != "x":
     print(f"You entered '{show_instructions}'")
 
 
-# This uses three ordinary lists
-
-print("This is a test about the Maori numbers and you will need to\n"
-      "get a question correct to earn a point. Plz put a lower case as two, four instead of Four ect, as this will "
-      "be incorrect.\n")
-
-# 1st list
-lower_case = [["Tahi", "one"], ["Rua", "two"], ["Toru", "three"], ["Whā", "four"], ["Rima", "five"],
-              ["Ono", "six"], ["Whitu", "seven"], ["Waru", "eight"], ["iwa", "nine"], ["Tekau", "ten"]]
-# 2nd list
-upper_case = [["Tahi", "One"], ["Rua", "Two"], ["Toru", "Three"], ["Whā", "Four"], ["Rima", "Five"],
-              ["Ono", "Six"], ["Whitu", "Seven"], ["Waru", "Eight"], ["iwa", "Nine"], ["Tekau", "Ten"]]
-# 3rd list
-numbers = [["Tahi", "1"], ["Rua", "2"], ["Toru", "3"], ["Whā", "4"], ["Rima", "5"],
-           ["Ono", "6"], ["Whitu", "7"], ["Waru", "8"], ["iwa", "9"], ["Tekau", "10"]]
-
-enjoyed = input("Did you enjoy this quiz: ")
-
-if enjoyed == "Yes":
-    print("Thank you")
-    goodbye()
-elif enjoyed == "yes":
-    print("Thank you")
-    goodbye()
-elif enjoyed == "y":
-    print("Thank you")
-    goodbye()
-else:
-    print("Sorry about that")
-    goodbye()
