@@ -50,8 +50,6 @@ def continues():
 
     if choice_ == "L":
         play(lower_case)
-    elif choice_ == "U":
-        play(upper_case)
     elif choice_ == "N":
         play(numbers)
     else:
@@ -65,9 +63,6 @@ def giving_up():
 # Main routine
 lower_case = [["Tahi", "one"], ["Rua", "two"], ["Toru", "three"], ["Whā", "four"], ["Rima", "five"],
               ["Ono", "six"], ["Whitu", "seven"], ["Waru", "eight"], ["iwa", "nine"], ["Tekau", "ten"]]
-
-upper_case = [["Tahi", "One"], ["Rua", "Two"], ["Toru", "Three"], ["Whā", "Four"], ["Rima", "Five"],
-              ["Ono", "Six"], ["Whitu", "Seven"], ["Waru", "Eight"], ["iwa", "Nine"], ["Tekau", "Ten"]]
 
 numbers = [["Tahi", "1"], ["Rua", "2"], ["Toru", "3"], ["Whā", "4"], ["Rima", "5"],
            ["Ono", "6"], ["Whitu", "7"], ["Waru", "8"], ["iwa", "9"], ["Tekau", "10"]]
