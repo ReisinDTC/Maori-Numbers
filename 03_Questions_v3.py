@@ -1,5 +1,6 @@
 """Component 3 - Questions_v3
-they can choose what they want to answer the questions like"""
+they can choose what they want to answer the questions like plus put in a score to see how many they got right
+"""
 
 import random
 
@@ -18,22 +19,36 @@ upper_case = [["Tahi", "One"], ["Rua", "Two"], ["Toru", "Three"], ["Whā", "Four
 # 3rd list
 numbers = [["Tahi", "1"], ["Rua", "2"], ["Toru", "3"], ["Whā", "4"], ["Rima", "5"],
            ["Ono", "6"], ["Whitu", "7"], ["Waru", "8"], ["iwa", "9"], ["Tekau", "10"]]
-choice = input("Enter test: 'L' to answer lower case words, 'U' to answer upper case words, 'N' to answer in numbers"
-               " and not words:  ")
-if choice == "L":
-    choice = lower_case
-if choice == "U":
-    choice = upper_case
-if choice == "N":
-    choice = numbers
+
+print("\nGood luck and have fun!")
+choice_ = input("Enter 'L' to answer lower case words, 'U' to answer upper case words, "
+                "or 'N' to answer in numbers: ")
 
 
-random.shuffle(choice)
+def play(choice_):
+    random.shuffle(choice_)
+    score = 0
 
-for i in choice:
-    answer = input("Enter the english word in lower case for {}: ".format(i[0]))
-    if answer == i[1]:
-        print("CORRECT")
+    for i in choice_:
+        answer = input("Enter the English word in lower case for {}: ".format(i[0]))
+        if answer.lower() == i[1]:
+            print("CORRECT!")
+            score += 1
+        else:
+            print("INCORRECT")
 
-    else:
-        print("INCORRECT")
+    print("Your score is:", score)
+
+
+if choice_ == "L":
+    play(lower_case)
+elif choice_ == "U":
+    play(upper_case)
+elif choice_ == "N":
+    play(numbers)
+else:
+    print("Invalid choice. Please try again.")
+
+
+
+
