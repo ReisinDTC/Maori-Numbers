@@ -1,6 +1,6 @@
 """Component 1 - Welcome_user_v5
 Making sure that it will only work for Yes and No.
-Anything else would have to make sure they must do it with those 
+Anything else would have to make it answer the question again
 """
 
 

@@ -1,4 +1,5 @@
 """Component 1 - Welcome_user v1
+Welcomes the user
 """
 
 symbol = "*"

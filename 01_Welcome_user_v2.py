@@ -13,5 +13,4 @@ def formatter(symbol, text):
 
 # Main routine
 print(formatter("_", "Welcome to the Maori Number quiz"))
-print()
-print(formatter("*", "Goodbye"))
+
